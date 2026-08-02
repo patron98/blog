@@ -1,0 +1,7 @@
+{{- /* GoatCounter: privacyvriendelijke analytics, geen cookies/banner.
+     Laadt alleen wanneer params.goatcounter gezet is (de site-code van
+     https://<code>.goatcounter.com). */ -}}
+{{- with site.Params.goatcounter }}
+<script data-goatcounter="https://{{ . }}.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+{{- end }}
