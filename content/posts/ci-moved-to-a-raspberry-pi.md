@@ -1,6 +1,6 @@
 ---
 title: "Our CI Failed in 2 Seconds With No Error — So We Moved It to a Raspberry Pi"
-date: 2026-08-03
+date: 2026-08-02
 tags: ["ci", "github-actions", "raspberry-pi", "self-hosted", "arm64"]
 summary: "GitHub Actions burned our entire monthly budget emulating ARM builds, then started refusing jobs in a way that looked exactly like broken code. The fix: three runner containers on the same Raspberry Pi the images deploy to. Builds went from an hour to minutes, and the bill went to zero."
 ---
