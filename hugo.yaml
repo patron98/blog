@@ -10,7 +10,7 @@ enableRobotsTXT: true
 
 params:
   description: "Engineering notes from a self-hosted algorithmic trading lab — MLOps, honest evaluation, and the bugs that taught us."
-  author: "Jim"
+  author: "Patron"
   defaultTheme: auto
   ShowReadingTime: true
   ShowShareButtons: false
