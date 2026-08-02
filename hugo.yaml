@@ -1,0 +1,38 @@
+baseURL: "https://patron98.github.io/blog/"
+languageCode: "en-us"
+title: "Piranha Labs"
+theme: "PaperMod"
+
+pagination:
+  pagerSize: 10
+
+enableRobotsTXT: true
+
+params:
+  description: "Engineering notes from a self-hosted algorithmic trading lab — MLOps, honest evaluation, and the bugs that taught us."
+  author: "Jim"
+  defaultTheme: auto
+  ShowReadingTime: true
+  ShowShareButtons: false
+  ShowCodeCopyButtons: true
+  ShowToc: true
+  homeInfoParams:
+    Title: "Piranha Labs 🐟"
+    Content: >
+      Engineering notes from a self-hosted algorithmic trading lab.
+      A Raspberry Pi, a Mac, an ML engine, and an unreasonable commitment
+      to honest measurement. Everything here ran in production — the
+      failures included. Nothing here is financial advice; the bot trades
+      demo money while we measure whether it deserves real money.
+
+menu:
+  main:
+    - identifier: archive
+      name: Archive
+      url: /archives/
+      weight: 10
+
+markup:
+  highlight:
+    style: monokai
+    lineNos: false

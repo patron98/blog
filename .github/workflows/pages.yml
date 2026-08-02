@@ -1,0 +1,34 @@
+# Bouwt en publiceert de blog naar GitHub Pages. Publieke repo = gratis
+# GitHub-hosted minutes; bewust NIET de self-hosted Pi-runners (publieke
+# repo's horen nooit op runners met een docker-socket naast een
+# productie-stack).
+name: Publish blog
+on:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: 'latest'
+      - run: hugo --minify
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./public
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
